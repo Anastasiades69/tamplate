@@ -1,0 +1,237 @@
+/*
+Less Stylesheets for 5D-mirage.
+By Rybenok Evgeniy.
+Mail: revgenyi@gmail.com
+*/
+
+@import url('reset.css'); /*Сбрасываем дефолтные стили*/
+@import url('grid.css'); /* Подключаем сетку */
+
+/* Colors */
+@yellow: #CE9A2A;
+@black: #000;
+@cyan:#0096e6;
+@white:#FFF;
+@blue:#0075B3;
+@red:red;
+
+// Typography
+h1,h2,h3,h4,p,label {
+	color:@white;
+	font-family: Arial,Helvetica,serif;
+}
+a {
+	font-family: Arial,Helvetica,serif;
+	color: @cyan;
+	text-decoration: underline;
+	&:visited {
+		color:@blue;
+	}
+}
+
+/* Custom styles */
+
+body {
+ 	background-color: @black;
+}
+
+header {
+	height: 140px;
+	div#lang{
+		height: 32px;
+		margin-top: 30px;
+		float: right;
+		clear: both;
+		#ru,#en {
+			width: 32px;
+			height: 32px;
+			display: block;
+			float: left;
+		}
+		#ru {
+			background: url('../img/ru.png') no-repeat center;
+		}
+		#en {
+			margin-left: 10px;
+			background: url('../img/en.png') no-repeat center;
+		}
+	}
+	p#login {
+		float: right;
+		clear: both;
+		color:@blue;
+		height: 20px;
+		line-height: 20px;
+		padding: 10px 0;
+		font-size: 14px;
+	}
+}
+
+ul#main_menu {
+	height: 20px;
+	padding: 10px 0;
+	float: right;
+	clear: both;
+	li {
+		float: left;
+		text-align: center;
+		width: auto;
+		a {
+			display: block;
+			padding-left: 20px;
+			text-decoration: none;
+			color:@white;
+			font-weight: bold;
+			font-size: 14px;
+			&:hover,&.current {
+				color:@yellow;
+			}
+		}
+		#help {
+			color:@red;
+		}
+		ul {
+			display: none;
+			background-color: @black;
+			position: absolute;
+			z-index: 50000;
+			padding: 10px 15px 10px 15px;
+			li {
+				float: none;
+				margin-top: 5px;
+				text-align: left;
+				a {
+					display: block;
+					padding: 0;
+					text-decoration: none;
+					color:@white;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+	li:hover {
+		ul {
+			display: block;
+		}
+	}
+}
+footer {
+	height: 100px;
+	margin-top: 50px;
+	display: block;
+}
+#logo {
+	margin-top: 30px;
+	width: 140px;
+	height: 110px;
+	float: left;
+	background: url('../img/logo.jpg') center no-repeat;
+	display: block;
+}
+#slider {
+	background: url('../img/slider_bg.gif') no-repeat top center;
+	height: 330px;
+	padding-top: 7px;
+	.slides_container {
+		height: 320px;
+	}
+	ul.pagination {
+		height: 20px;
+		padding: 4px;
+		width: 100px;
+		margin: 0 auto;
+		li {
+			float: left;
+			margin-top: 15px;
+			width: 12px;
+			height: 12px;
+			border-radius: 6px;
+			background-color: #f6f6f6;
+			margin-left: 5px;
+			text-indent: -9900px;
+			cursor: pointer;
+			&:hover,&.current {
+				background-color: @yellow;
+			}
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+#promo {
+	clear: both;
+	margin-top: 30px;
+	a {
+		overflow: hidden;
+		img {
+			// margin:0;
+			-webkit-transition: all  0.15s;
+			-moz-transition: all  0.15s;
+			-ms-transition: all  0.15s;
+			-o-transition: all 0.15s;
+			transition: all 0.15s;
+			&:hover {
+			// margin: -25px -55px auto -55px;
+			-webkit-transform: scale(1.15);
+			-moz-transform: scale(1.15);
+			-ms-transform: scale(1.15);
+			-o-transform: scale(1.15);
+			transform: scale(1.15);
+			z-index: 5;
+			}
+		}
+	}
+}
+
+#second_menu {
+	margin-top: 10px;
+	float: right;
+	li {
+		float: left;
+		text-align: right;
+		margin-left: 50px;
+		a {
+			font-size: 12px;
+			color:@white;
+			text-decoration: underline;
+		}
+	}
+}
+#footer_white_line {
+	// clear: both;
+	height: 1px;
+	background-color: @white;
+	width: 100%;
+}
+#copyright {
+	clear: both;
+	font-size: 12px;
+	margin-top: 60px;
+	p {
+		float: left;
+	}
+	#social_footer {
+		float: right;
+		a {
+			margin-left: 20px;
+		}
+	}
+}
+
+#content {
+	clear: both;
+	margin-top: 30px;
+    h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    p{
+        line-height: 30px;
+    }
+
+}
